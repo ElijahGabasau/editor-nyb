@@ -1,0 +1,102 @@
+// --- layout positioning ---
+.u-margin-top-xsm {
+  margin-top: 2rem;
+}
+
+.u-margin-top-sm {
+  margin-top: 4rem;
+}
+
+.u-shell {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+// --- inner positioning ---
+.u-abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.u-margin-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.u-content-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.u-content-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+// --- color ---
+.u-marble-text {
+  width: max-content;
+  background: linear-gradient(
+    90deg,
+    #ff9de9 0%,
+    #ff83eb 23.23%,
+    #aa7aff 53.96%,
+    #7ba0ff 78.96%,
+    #a7c0ff 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.u-solid {
+  background: $color-white;
+  border: 1px solid rgba($color-white, 0.2);
+}
+
+.u-glass-pale {
+  background: rgba($color-white, 0.85);
+  border: 1px solid rgba($color-white, 0.2);
+}
+
+.u-glass-semipale {
+  background: rgba($color-white, 0.65);
+  border: 1px solid rgba($color-white, 0.2);
+}
+
+.u-glass {
+  background: rgba($color-white, 0.2);
+  border: 2px solid rgba($color-white, 0.2);
+}
+
+// --- font ---
+.u-hash {
+  color: $color-link;
+  font-weight: 400;
+}
+
+.u-text-shadow {
+  text-shadow: 0px 2px 2px rgba($color-black, 0.25);
+}
+
+// --- styling ---
+.u-border-radius-3 {
+  border-radius: 3rem;
+}
+
+.u-border-radius-2 {
+  border-radius: 2rem;
+}
+
+.u-border-radius-1 {
+  border-radius: 1rem;
+}
+
+.u-glass-blur {
+  backdrop-filter: blur(0.7rem);
+}

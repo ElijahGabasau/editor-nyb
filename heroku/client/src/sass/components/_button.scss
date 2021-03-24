@@ -1,0 +1,39 @@
+.button {
+  font-weight: 800;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+
+  background: $color-primary;
+  border: 2px solid rgba($color-white, 0.4);
+  color: $color-white;
+  padding: 1.4rem 3rem;
+  border-radius: 3rem;
+
+  box-shadow: none;
+  max-width: 25rem;
+
+  cursor: pointer;
+
+  &--sm {
+    font-weight: 600;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    padding: 1rem 2rem;
+  }
+
+  &--marble {
+    background: linear-gradient(
+      90deg,
+      #ff9de9 0%,
+      #ff83eb 25%,
+      #aa7aff 50%,
+      #7ba0ff 75%,
+      #a7c0ff 100%
+    );
+  }
+
+  &--danger {
+    background: $color-tertiary;
+  }
+}

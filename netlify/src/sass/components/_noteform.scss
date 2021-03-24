@@ -1,0 +1,80 @@
+.noteform {
+  position: relative;
+  padding: 4rem 2rem;
+
+  width: 98%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include respond(tab-port) {
+    width: 80%;
+  }
+
+  @include respond(tab-land) {
+    width: 60%;
+    padding: 4rem;
+  }
+
+  @include respond(desktop) {
+    width: 50%;
+  }
+
+  &__container {
+    @extend .u-content-flex-center;
+
+    min-height: 100vh;
+  }
+
+  &__background {
+    @extend .u-abs-center;
+    @extend .u-shell;
+    @extend .u-glass-blur;
+    @extend .u-glass-semipale;
+    @extend .u-border-radius-3;
+  }
+
+  &__form {
+    display: grid;
+    row-gap: 2rem;
+  }
+
+  &__heading {
+    @extend .notes__bar;
+  }
+
+  &__link {
+    @extend .notes__link;
+  }
+
+  &__tag {
+    @extend .note__tag;
+  }
+
+  &__field {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    row-gap: 1rem;
+  }
+
+  &__label {
+    color: rgba($color-black, 0.6);
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  &__tags {
+    @extend .note__tags;
+  }
+
+  &__title {
+    @extend .notes__title;
+  }
+
+  &__button {
+    justify-self: center;
+    width: 60%;
+    max-width: 30rem;
+  }
+}

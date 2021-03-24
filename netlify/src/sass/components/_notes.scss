@@ -1,0 +1,44 @@
+.notes {
+  padding: 3rem;
+  position: relative;
+
+  display: grid;
+  row-gap: 2rem;
+
+  &__background {
+    @extend .u-abs-center;
+    @extend .u-shell;
+    @extend .u-glass-blur;
+    @extend .u-glass-semipale;
+    @extend .u-border-radius-2;
+  }
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    @extend .u-marble-text;
+
+    text-transform: lowercase;
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 0.5rem 0.5rem 2.5rem $color-grey-1;
+
+    margin-right: 2rem;
+  }
+
+  &__title {
+    color: $color-white;
+    font-weight: 600;
+    font-size: 3rem;
+    text-shadow: 0px 0.4rem 0.4rem rgba($color-black, 0.25);
+
+    &--noresults {
+      text-align: center;
+      padding: 8rem;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.tag {
+  @extend .u-border-radius-3;
+  @extend .u-glass-pale;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2rem;
+  text-transform: capitalize;
+  color: $color-grey-1;
+
+  padding: 0.6rem 1.5rem;
+
+  &--active {
+    background: $color-primary;
+    color: $color-white;
+  }
+
+  cursor: pointer;
+}

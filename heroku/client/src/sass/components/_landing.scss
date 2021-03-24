@@ -1,0 +1,30 @@
+.landing {
+  display: grid;
+  row-gap: 3rem;
+  grid-template-columns: 2rem 1fr 2rem;
+  grid-template-areas:
+    '. heading .'
+    '. searchbox .'
+    '. notes .';
+
+  @include respond(tab-port) {
+    grid-template-columns: 10% 1fr 10%;
+  }
+
+  @include respond(tab-land) {
+    grid-template-columns: 20% 1fr 20%;
+  }
+
+  &__heading {
+    @extend .u-margin-top-sm;
+    grid-area: heading / heading;
+  }
+
+  &__searchbox {
+    grid-area: searchbox / searchbox;
+  }
+
+  &__notes {
+    grid-area: notes / notes;
+  }
+}

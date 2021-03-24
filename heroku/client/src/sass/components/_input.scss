@@ -1,0 +1,11 @@
+.input {
+  @extend .u-glass-pale;
+  @extend .u-border-radius-2;
+  padding: 1.4rem 1.6rem;
+  outline: none;
+
+  &__textarea {
+    resize: none;
+    height: 15rem;
+  }
+}

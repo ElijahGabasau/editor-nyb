@@ -1,0 +1,28 @@
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  padding: 0 1rem;
+
+  @include respond(tab-port) {
+    padding: 0 3rem;
+  }
+
+  &__background {
+    @extend .u-abs-center;
+    @extend .u-shell;
+    @extend .u-glass-blur;
+    @extend .u-glass-semipale;
+    @extend .u-border-radius-2;
+  }
+
+  &__title {
+    color: $color-white;
+    font-weight: 900;
+    font-size: 6rem;
+    text-shadow: 0px 4px 4px rgba($color-black, 0.25);
+    text-transform: lowercase;
+  }
+}

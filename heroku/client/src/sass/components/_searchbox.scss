@@ -1,0 +1,52 @@
+.searchbox {
+  padding: 3rem;
+  position: relative;
+
+  display: grid;
+  row-gap: 2rem;
+
+  &__background {
+    @extend .u-abs-center;
+    @extend .u-shell;
+    @extend .u-glass-blur;
+    @extend .u-glass-semipale;
+    @extend .u-border-radius-2;
+  }
+
+  &__bar {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__button {
+    min-width: 10rem;
+    min-height: 5rem;
+  }
+
+  &__text {
+    @extend .u-glass-pale;
+    @extend .u-border-radius-2;
+
+    color: rgba($color-black, 0.6);
+
+    padding: 1.4rem 1.6rem;
+    height: 5rem;
+    width: 60%;
+    overflow: hidden;
+    position: relative;
+
+    animation: growth-60 1s ease-in-out backwards;
+
+    * {
+      position: absolute;
+      width: 50rem;
+
+      transform: translateY(-8%);
+    }
+  }
+
+  &__input {
+    width: 60%;
+    animation: growth-60 1s ease-in-out backwards;
+  }
+}

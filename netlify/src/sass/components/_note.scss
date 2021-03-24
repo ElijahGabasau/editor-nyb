@@ -1,0 +1,60 @@
+.note {
+  @extend .u-glass-pale;
+  @extend .u-border-radius-3;
+
+  padding: 3rem;
+
+  display: grid;
+  row-gap: 2rem;
+
+  &__title {
+    @extend .heading-3;
+  }
+
+  &__tags {
+    @extend .u-content-flex-wrap;
+
+    padding-top: 0.5rem;
+    border-top: 0.1rem solid rgba($color-grey-1, 0.2);
+  }
+
+  &__tag {
+    font-weight: 600;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    text-transform: capitalize;
+    color: rgba($color-black, 0.6);
+
+    padding: 0.2rem;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 3rem;
+  }
+
+  &__button {
+    min-width: 10rem;
+  }
+
+  &__confirm {
+    color: rgba($color-black, 0.8);
+    font-weight: 600;
+
+    height: 100%;
+    width: 20%;
+    overflow: hidden;
+    position: relative;
+
+    animation: growth-20 0.6s ease-in-out backwards;
+
+    * {
+      position: absolute;
+      top: 50%;
+      left: 1rem;
+      transform: translateY(-50%);
+
+      width: 20rem;
+    }
+  }
+}
