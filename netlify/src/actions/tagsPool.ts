@@ -11,7 +11,7 @@ export interface PopTagPoolAction {
 }
 
 export const pushTagToPool = (tags: string[]): PushTagPoolAction => {
-  const parsedTags = tags.map(tag => tag.toLowerCase());
+  const parsedTags = tags.map(tag => tag);
 
   return {
     type: TagsPoolTypes.PUSH_TAG,
@@ -20,7 +20,7 @@ export const pushTagToPool = (tags: string[]): PushTagPoolAction => {
 }
 
 export const popTagFromPool = (tags: string[]): PopTagPoolAction => {
-  const parsedTags = tags.map(tag => tag.toLowerCase());
+  const parsedTags = tags.map(tag => tag);
 
   return {
     type: TagsPoolTypes.POP_TAG,
