@@ -4,6 +4,7 @@ const util = require('util');
 const readNotes = require('../middlewares/readNotes');
 
 const note = express.Router()
+const url = './src/api/notes.json';
 
 note.get('/', readNotes, async (req, res) => {
   const respond = Object.values(req.notes);
@@ -23,7 +24,7 @@ note.delete('/:id', readNotes, async (req, res) => {
   const data = JSON.stringify(newNotes, null, 2);
 
   const writeFile = util.promisify(fs.writeFile);
-  await writeFile('./src/api/collections/notes.json', data);
+  await writeFile(url, data);
 
   res.status(200).send(`${respond.id}`);
 });
@@ -44,11 +45,11 @@ note.patch('/:id', readNotes, async (req, res) => {
   const data = JSON.stringify(notes, null, 2);
 
   const writeFile = util.promisify(fs.writeFile);
-  await writeFile('./src/api/collections/notes.json', data);
+  await writeFile(url, data);
 
   //getting respond object from updated db as it is considered a better practice  
   const readFile = util.promisify(fs.readFile); 
-  const modifiedRawData = await readFile('./src/collections/notes.json');
+  const modifiedRawData = await readFile(url);
   const modifiedData = await JSON.parse(modifiedRawData);
 
   if(!modifiedData[id]) {
@@ -74,11 +75,11 @@ note.post('/', readNotes, async (req, res) => {
   const data = JSON.stringify(notes, null, 2);
 
   const writeFile = util.promisify(fs.writeFile);
-  await writeFile('./src/api/collections/notes.json', data);
+  await writeFile(url, data);
 
   //getting respond object from updated db as it is considered a better practice 
   const readFile = util.promisify(fs.readFile); 
-  const modifiedRawData = await readFile('./src/collections/notes.json');
+  const modifiedRawData = await readFile(url);
   const modifiedData = await JSON.parse(modifiedRawData);
 
   if(!modifiedData[newId]) {

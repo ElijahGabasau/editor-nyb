@@ -1,0 +1,12 @@
+.background {
+  background: $color-secondary;
+  background-image: url('../../img/background.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: right 50%;
+
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1000;
+}
